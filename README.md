@@ -69,7 +69,16 @@ Option|Possible values|Default|Description
 ------|------|------|-----------
 `serverUri`|`string`|none|To check your correct Server Uri see in your shelly app: "settings > user settings > auth. cloud Key > get key".
 `authKey`|`string`|none|get your auth key in the app: "settings > user settings > auth. cloud Key > get key".
-`shellys`|`array[]`|none|see config example. To find the device-name go to: "device > settings > device info > device id".
+`shellys`|`array[]`|none|see config example. "device-name" can be "Batman" or "whatever". To find the device-id go to: "device > settings > device info > device id".
 `updateInterval`|`integer`|5*1000|the api says that every second is possible. Find your best value.
+
+## Tested with:
+ - Shelly Plug / PlugS
+ - Shelly Plus Plug S
+ - Shelly Plus 1 PM 
+
+## Credits
+- Open AI
+- my wife :-)
 
 [mm]: https://github.com/MagicMirrorOrg/MagicMirror
