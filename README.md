@@ -8,7 +8,9 @@ It is currently hard to say if every device is considered correctly. I have the 
  - Shelly Plus 1 PM 
 
 Example:
+
 ![Example of MMM-ShellyStatusTable](./IMG_4118.jpg)
+
 (my Mirror is running headless only, so only a stupid picture)
 
 
