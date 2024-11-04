@@ -63,18 +63,6 @@ To use this module, add it to the modules array in the `config/config.js` file:
 	},
 ```
 
-Or you could use all the options:
-
-```js
-    {
-        module: 'MMM-Template',
-        position: 'lower_third',
-        config: {
-            exampleContent: 'Welcome world'
-        }
-    },
-```
-
 ## Configuration options
 
 Option|Possible values|Default|Description
