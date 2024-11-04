@@ -72,6 +72,9 @@ Option|Possible values|Default|Description
 `shellys`|`array[]`|none|see config example. "device-name" can be "Batman" or "whatever". To find the device-id go to: "device > settings > device info > device id".
 `updateInterval`|`integer`|5*1000|the api says that every second is possible. Find your best value.
 
+## CSS
+Included. Some descriptions are added. It took me a while to get a nice look. Adjust to your belongings.
+
 ## Tested with:
  - Shelly Plug / PlugS
  - Shelly Plus Plug S
