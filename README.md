@@ -7,6 +7,8 @@ It is currently hard to say if every device is considered correctly. I have the 
  - Shelly Plus Plug S
  - Shelly Plus 1 PM 
 
+Currently no translation is available. It will follow in the next days. But it is not hard to fix by your own, I hope.
+
 Example:
 
 ![Example of MMM-ShellyStatusTable](./IMG_4118.jpg)
