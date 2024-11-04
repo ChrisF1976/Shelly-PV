@@ -22,7 +22,12 @@ In your terminal, go to your [MagicMirror²][mm] Module folder and clone MMM-She
 
 ```bash
 cd ~/MagicMirror/modules
-git clone [GitHub url]
+git clone https://github.com/ChrisF1976/MMM-ShellystatusTable.git
+```
+
+not needed but doesn't hurt: 
+```bash
+npm install
 ```
 
 ### Update
@@ -37,10 +42,25 @@ git pull
 To use this module, add it to the modules array in the `config/config.js` file:
 
 ```js
-    {
-        module: 'MMM-Template',
-        position: 'lower_third'
-    },
+	{
+	module: "MMM-ShellyStatusTable",
+	position: "bottom_center",
+	disabled:false,
+	config: {
+		serverUri: "https://shelly-55-eu.shelly.cloud", // Shelly Cloud-API Server
+		authKey: "XXXXXXXXXXXXXXXXXXXXXXXXXXXX", // API-key: settings > user settings > auth. cloud Key > get key
+		shellys: [
+			{ name: "device-name", id: "1xxxxxxc89" },
+			{ name: "device-name", id: "2xxxxxxc89" },
+			{ name: "device-name", id: "3xxxxxxc89" },
+			{ name: "device-name", id: "4xxxxxxc89" },
+			{ name: "device-name", id: "5xxxxxxc89" },
+			{ name: "device-namee", id: "6xxxxxxc89" },
+			// device-name: device > settings > device info > device id
+			],
+		updateInterval: 5*1000, // update every 5 seconds - 1s may be possible, but I did't try
+		}
+	},
 ```
 
 Or you could use all the options:
