@@ -1,6 +1,6 @@
 Module.register("MMM-ShellyStatusTable", {
     defaults: {
-        updateInterval: 60000, // Aktualisierungsintervall in Millisekunden (standardmäßig jede Minute)
+        updateInterval: 5*1000, // Aktualisierungsintervall in Millisekunden (standardmäßig jede Minute)
     },
 
     start: function () {
