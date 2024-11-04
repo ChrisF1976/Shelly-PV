@@ -33,7 +33,7 @@ npm install
 ### Update
 
 ```bash
-cd ~/MagicMirror/modules/MMM-Template
+cd ~/MagicMirror/modules/MMM-ShellyStatusTable
 git pull
 ```
 
