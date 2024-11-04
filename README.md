@@ -67,18 +67,7 @@ To use this module, add it to the modules array in the `config/config.js` file:
 
 Option|Possible values|Default|Description
 ------|------|------|-----------
-`exampleContent`|`string`|not available|The content to show on the page
+`serverUri`|`string`|https://shelly-55-eu.shelly.cloud|To check your correct Server Uri see in your shelly app "settings > user settings > auth. cloud Key > get key"
 
-## Sending notifications to the module
-
-Notification|Description
-------|-----------
-`TEMPLATE_RANDOM_TEXT`|Payload must contain the text that needs to be shown on this module
-
-## Developer commands
-
-- `npm install` - Install devDependencies like ESLint.
-- `npm run lint` - Run linting and formatter checks.
-- `npm run lint:fix` - Fix linting and formatter issues.
 
 [mm]: https://github.com/MagicMirrorOrg/MagicMirror
