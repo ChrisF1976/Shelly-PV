@@ -1,11 +1,6 @@
 # MMM-ShellyStatusTable
-Use this template for creating new MagicMirror² modules.
 
-See the [wiki page](https://github.com/Dennis-Rosenbaum/MMM-Template/wiki) for an in depth overview of how to get started.
-
-# MMM-Template
-
-![Example of MMM-Template](./example_1.png)
+![Example of MMM-ShellyStatusTable](./IMG_4118.jpg)
 
 [Module description]
 
@@ -13,7 +8,7 @@ See the [wiki page](https://github.com/Dennis-Rosenbaum/MMM-Template/wiki) for a
 
 ### Install
 
-In your terminal, go to your [MagicMirror²][mm] Module folder and clone MMM-Template:
+In your terminal, go to your [MagicMirror²][mm] Module folder and clone MMM-ShellyStatusTable:
 
 ```bash
 cd ~/MagicMirror/modules
