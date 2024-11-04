@@ -67,7 +67,9 @@ To use this module, add it to the modules array in the `config/config.js` file:
 
 Option|Possible values|Default|Description
 ------|------|------|-----------
-`serverUri`|`string`|https://shelly-55-eu.shelly.cloud|To check your correct Server Uri see in your shelly app "settings > user settings > auth. cloud Key > get key"
-
+`serverUri`|`string`|none|To check your correct Server Uri see in your shelly app: "settings > user settings > auth. cloud Key > get key".
+`authKey`|`string`|none|get your auth key in the app: "settings > user settings > auth. cloud Key > get key".
+`shellys`|`array[]`|none|see config example. To find the device-name go to: "device > settings > device info > device id".
+`updateInterval`|`integer`|5*1000|the api says that every second is possible. Find your best value.
 
 [mm]: https://github.com/MagicMirrorOrg/MagicMirror
