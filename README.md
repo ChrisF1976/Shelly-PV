@@ -1,5 +1,10 @@
 # MMM-ShellyStatusTable
 
+Example:
+
+![Example of MMM-ShellyStatusTable](./ShellyStatusTable.png)
+
+
 The MMM-ShellyStatusTable module displays the switch status and power consumption of multiple Shelly devices in a table on the MagicMirror², including a total consumption sum. It regularly updates the data via the Shelly Cloud API Gen 1 and Gen 2+. So it should be independent from the devices in your smart home.
 
 It is currently hard to say if every device is considered correctly. I have the following devices and it works:
@@ -8,13 +13,6 @@ It is currently hard to say if every device is considered correctly. I have the 
  - Shelly Plus 1 PM 
 
 Currently no translation is available. It will follow in the next days. But it is not hard to fix by your own, I hope.
-
-Example:
-
-![Example of MMM-ShellyStatusTable](./ShellyStatusTable.png)
-
-(my Mirror is running headless only, so only a stupid picture)
-
 
 ## Installation
 
