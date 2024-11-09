@@ -11,7 +11,7 @@ Currently no translation is available. It will follow in the next days. But it i
 
 Example:
 
-![Example of MMM-ShellyStatusTable](./IMG_4118.jpg)
+![Example of MMM-ShellyStatusTable](./ShellyStatusTable.png)
 
 (my Mirror is running headless only, so only a stupid picture)
 
