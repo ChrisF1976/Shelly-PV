@@ -6,31 +6,31 @@ Example:
 
 The MMM-ShellyPV module for MagicMirror is designed to monitor and display the status and energy consumption of Shelly devices, specifically focusing on devices related to solar power (PV systems) and energy usage. This module connects to the Shelly devices via their API to fetch real-time data such as power consumption, device status (on/off), and possibly other metrics depending on the configuration.
 
-Here’s a breakdown of its key features:
+## Here’s a breakdown of its key features:
 
-## 1. Device Status Monitoring:
+### 1. Device Status Monitoring:
 	The module can fetch and display whether specific Shelly devices are on or off, allowing users to keep track of their devices' current status.
 
-## 2. Power Consumption:
+### 2. Power Consumption:
 It monitors the power consumption of the Shelly devices, displaying the real-time energy usage in watts. This is useful for tracking energy production (e.g., solar power) and consumption (e.g., appliances, lights).
 
-## 3. Gauge Display:
+### 3. Gauge Display:
 The module visualizes energy consumption data using a gauge (meter) that displays the total power being used or generated. This could be a dynamic gauge that fills based on the amount of power.
 
-## 4. Device List:
+### 4. Device List:
 The module can optionally display a list of Shelly devices, showing their names and their current status (on/off) based on the fetched data. This list is configurable, and users can choose whether it should be displayed or not.
 
-## 5. Configuration Options:
+### 5. Configuration Options:
 The module is highly configurable, allowing users to set options like:
 	Update Interval: How often the status of the devices should be updated.
 	Max Power: The maximum power limit used for the gauge.
 	Radius: The size of the gauge circle.
 	ShowShellyList: A flag to decide whether the list of Shelly devices should be shown on the MagicMirror interface.
 
-## 6. Dynamic Display:
+### 6. Dynamic Display:
 The status of each Shelly device is dynamically updated based on the data fetched from the Shelly API, ensuring that the user always has current information.
 
-## 7. Integration with MagicMirror:
+### 7. Integration with MagicMirror:
 As part of the MagicMirror ecosystem, the module provides an elegant, interactive way to monitor energy data from Shelly devices on the mirror interface, potentially alongside other smart home integrations or information.
 
 ## Installation
@@ -99,13 +99,22 @@ Option|Possible values|Default|Description
 `ShowShellyList`|`true/false`|true|to show the devices in the list set as "true". With this setting you can also see if the device is switched on or off.
 
 
-## CSS
+### CSS
 Included. Some descriptions are added. It took me a while to get a nice look. Adjust to your belongings.
 
 ## More Examples:
 
-![Only Gauge ("ShowShellyList:false,")](./only gauge.png)
+### With option "ShowShellyList:false,"
+![Only Gauge ("ShowShellyList:false,")](./only_gauge.png)
 
+### "// maxPower:....,"
+![without_maxPower](./without_maxPower.png)
+
+### With MMM-ShellStatusTable-module
+
+![with ShellyStatusTable module](./with_Table.png)
+
+(.https://github.com/ChrisF1976/ShellyStatusTable/)
 
 ## Tested with:
  - Shelly Plug / PlugS
