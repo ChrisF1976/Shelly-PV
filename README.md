@@ -21,7 +21,7 @@ The module visualizes energy consumption data using a gauge (meter) that display
 The module can optionally display a list of Shelly devices, showing their names and their current status (on/off) based on the fetched data. This list is configurable, and users can choose whether it should be displayed or not.
 
 ### 5. Configuration Options:
-The module is highly configurable, allowing users to set options like:
+The module is highly configurable, allowing users to set options like
     - Update Interval: How often the status of the devices should be updated.
     - Max Power: The maximum power limit used for the gauge.
     - Radius: The size of the gauge circle.
