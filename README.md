@@ -114,7 +114,11 @@ Included. Some descriptions are added. It took me a while to get a nice look. Ad
 
 ![with ShellyStatusTable module](./with_Table.png)
 
-(.https://github.com/ChrisF1976/ShellyStatusTable/)
+Get it here:
+https://github.com/ChrisF1976/ShellyStatusTable/
+
+#### if the Module MMM-ShellyPV and MMM-ShellyStatusTable run parallel on your mirror you'll see some error messages. But anyway it works when the Mirror is fully running.
+
 
 ## Tested with:
  - Shelly Plug / PlugS
