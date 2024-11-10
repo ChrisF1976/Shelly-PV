@@ -111,7 +111,8 @@ Included. Some descriptions are added. It took me a while to get a nice look. Ad
 ### "// maxPower:....,"
 ![without_maxPower](./without_maxPower.png)
 
-### With MMM-ShellStatusTable-module
+### With MMM-ShellyStatusTable-module
+you can also show your normal shellys in this module. The main motivation for me was to display my Shelly devices in a visually appealing way—far beyond what a simple table could offer.
 
 ![with ShellyStatusTable module](./with_Table.png)
 
