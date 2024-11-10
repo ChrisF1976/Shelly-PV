@@ -22,10 +22,10 @@ The module can optionally display a list of Shelly devices, showing their names 
 
 ### 5. Configuration Options:
 The module is highly configurable, allowing users to set options like:
-	Update Interval: How often the status of the devices should be updated.
-	Max Power: The maximum power limit used for the gauge.
-	Radius: The size of the gauge circle.
-	ShowShellyList: A flag to decide whether the list of Shelly devices should be shown on the MagicMirror interface.
+    - Update Interval: How often the status of the devices should be updated.
+    - Max Power: The maximum power limit used for the gauge.
+    - Radius: The size of the gauge circle.
+    - ShowShellyList: A flag to decide whether the list of Shelly devices should be shown on the MagicMirror interface.
 
 ### 6. Dynamic Display:
 The status of each Shelly device is dynamically updated based on the data fetched from the Shelly API, ensuring that the user always has current information.
