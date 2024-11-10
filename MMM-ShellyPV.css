@@ -1,0 +1,66 @@
+/* MMM-ShellyPV.css */
+
+.shellyPVGauge {
+    display: inline-block;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: 10px;
+    color: #333;
+    width: 350px; /* Feste Gesamtbreite */
+    box-sizing: border-box;
+}
+
+#powerGauge {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.shellyPVGauge svg {
+   
+}
+
+.shellyPVGauge text {
+    font-weight: bold;
+    color:white;
+    mix-blend-mode: difference;
+}
+
+.shellyPVGauge circle {
+    transition: stroke-dasharray 0.3s ease;
+}
+
+/* Geräte-Liste im flexbox-Layout */
+.shellyPVGauge ul {
+    display: flex;
+    flex-wrap: wrap; /* Bei zu vielen Geräten in die nächste Zeile umbrechen */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    gap: 10px; /* Abstand zwischen den Geräten */
+    justify-content: center; /* Zentriert die Geräte in der Breite */
+    max-width: 100%; /* Passt die Geräte-Liste an die Breite an */
+    justify-content: center; /* Zentriert die Geräte nebeneinander */
+ }
+
+.shellyPVGauge ul li {
+    padding: 5px 10px;
+    background-color: #f0f0f0; /* Hintergrundfarbe der Geräte */
+    color: #333; /* Textfarbe */
+    border-radius: 8px;
+    font-size: 14px;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.6), 4px 3px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Für das grüne Hintergrund, wenn das Gerät eingeschaltet ist */
+.shellyPVGauge ul li.on {
+    background-color: #28a745; /* Grün, wenn eingeschaltet */
+    color: white; /* Weißer Text für besseren Kontrast */
+}
+
+/* Standard Hintergrundfarbe, wenn das Gerät ausgeschaltet ist */
+.shellyPVGauge ul li.off {
+    background-color: #f0f0f0; /* Standard Hintergrund, wenn ausgeschaltet */
+    color: #333; /* Standard Textfarbe */
+}
