@@ -9,7 +9,7 @@ The MMM-ShellyPV module for MagicMirror is designed to monitor and display the s
 ## Here’s a breakdown of its key features:
 
 ### 1. Device Status Monitoring:
-	The module can fetch and display whether specific Shelly devices are on or off, allowing users to keep track of their devices' current status.
+The module can fetch and display whether specific Shelly devices are on or off, allowing users to keep track of their devices' current status.
 
 ### 2. Power Consumption:
 It monitors the power consumption of the Shelly devices, displaying the real-time energy usage in watts. This is useful for tracking energy production (e.g., solar power) and consumption (e.g., appliances, lights).
