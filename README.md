@@ -101,7 +101,7 @@ Option|Possible values|Default|Description
 
 ### CSS
 Included. Some descriptions are added. It took me a while to get a nice look. Adjust to your belongings.
-####If you want to adjust the circle and the text color you need to modify these values in the "// SVG für das Gauge erstellen" area of the MMM-ShellyPV.js-file.
+#### If you want to adjust the circle and the text color you need to modify these values in the "// SVG für das Gauge erstellen" area of the MMM-ShellyPV.js-file.
 
 ## More Examples:
 
