@@ -41,7 +41,7 @@ In your terminal, go to your [MagicMirror²][mm] Module folder and clone MMM-She
 
 ```bash
 cd ~/MagicMirror/modules
-git clone https://github.com/ChrisF1976/MMM-ShellyPV.git
+https://github.com/ChrisF1976/ShellyPV.git
 ```
 
 not needed but doesn't hurt: 
