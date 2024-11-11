@@ -77,7 +77,7 @@ Module.register("MMM-ShellyPV", {
   // Hilfsfunktion zum Erstellen des Gauges
   createGauge: function (element, power) {
     const radius = this.config.Radius || 100;
-    const maxPower = this.config.MaxPower || 100; // Maximalwert für den Gauge-Bereich
+    const maxPower = this.config.MaxPower || null; // Maximalwert für den Gauge-Bereich
 
     const isExporting = power < 0; // Prüfen, ob der Wert negativ ist (Rückspeisung)
     const displayPower = Math.abs(power); // Absoluten Wert für die Anzeige verwenden
