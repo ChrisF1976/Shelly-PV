@@ -75,43 +75,50 @@ Module.register("MMM-ShellyPV", {
     },
 
     // Hilfsfunktion zum Erstellen des Gauges
-    createGauge: function (element, power) {
-        const radius = this.config.Radius || 100; // Standardradius, falls nicht gesetzt
-        const maxPower = this.config.MaxPower ||  null; // Standardwert, falls nicht gesetzt
-    
+  createGauge: function (element, power) {
+    const radius = this.config.Radius || 100;
+    const maxPower = this.config.MaxPower || 100; // Maximalwert für den Gauge-Bereich
+
+    const isExporting = power < 0; // Prüfen, ob der Wert negativ ist (Rückspeisung)
+    const displayPower = Math.abs(power); // Absoluten Wert für die Anzeige verwenden
+    const circleColor = isExporting ? "#3498db" : "#3eaf7c"; // Farbe abhängig von Verbrauch oder Export
+
     // SVG für das Gauge erstellen
     element.innerHTML = `
         <svg width="${radius * 2}" height="${radius * 2}" viewBox="-10 -10 ${radius * 2 + 20} ${radius * 2 + 10}">
-            <!-- Filterdefinitionen für Schatten und Glanz -->
+            <!-- Filter für Schatten und Glanz -->
             <defs>
-                <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
-                    <feDropShadow dx="5" dy="5" stdDeviation="5" flood-color="rgba(0, 0, 0, 0.6)" />
-                </filter>
-                <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-                    <feGaussianBlur stdDeviation="4" result="blur" />
-                    <feMerge>
-                        <feMergeNode in="blur" />
-                        <feMergeNode in="SourceGraphic" />
-                    </feMerge>
+                <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+                    <feDropShadow dx="0" dy="5" stdDeviation="4" flood-color="#000000" flood-opacity="0.5"/>
                 </filter>
             </defs>
+
+            <!-- Hintergrund des Kreises mit Glanz- und Schatteneffekt -->
+            <circle cx="${radius}" cy="${radius}" r="${radius - 10}" stroke="#ddd" stroke-width="15" fill="none" filter="url(#shadow)" />
             
-            <!-- Hintergrund des Kreises mit Schatten und Glanz -->
-            <circle cx="${radius}" cy="${radius}" r="${radius - 10}" stroke="#E0E0E0" stroke-width="15" fill="none" filter="url(#glow)" />
-	    <circle cx="${radius}" cy="${radius}" r="${radius - 10}" stroke="#E0E0E0" stroke-width="15" fill="none" filter="url(#shadow)" />
-            
-            <!-- Fortschrittsanzeige, abhängig vom Energieverbrauch -->
-            <circle cx="${radius}" cy="${radius}" r="${radius - 10}" stroke="#3eaf7c" stroke-width="15" fill="none"
-                stroke-dasharray="${Math.min(power, maxPower) * 2 * Math.PI * (radius - 10) / maxPower} ${(2 * Math.PI * (radius - 10))}"/* filter="url(#glow)"*/ />
-            
-            <!-- Textanzeige des aktuellen Energieverbrauchs, mittig im Kreis mit Schatten -->
-            <text x="${radius}" y="${radius}" text-anchor="middle" font-size="22" fill="#fff" filter="url(#shadow)">
-                ${power.toFixed(2)} W
+           <!-- Fortschrittsanzeige, abhängig vom Energieverbrauch oder Export -->
+            <circle cx="${radius}" cy="${radius}" r="${radius - 10}" stroke="${circleColor}" stroke-width="15" fill="none"
+                stroke-dasharray="${Math.min(displayPower, maxPower) * 2 * Math.PI * (radius - 10) / maxPower} ${(2 * Math.PI * (radius - 10))}" 
+                transform="rotate(-90 ${radius} ${radius})" />
+
+            <!-- Textanzeige des aktuellen Werts, mit neuer Zeile für "Export" oder "Verbrauch" -->
+            <text x="${radius}" y="${radius}" text-anchor="middle" font-size="20" fill="#333">
+                ${displayPower.toFixed(2)} W
             </text>
             
+            ${isExporting ? `
+            <text x="${radius}" y="${radius * 1.5}" text-anchor="middle" font-size="16" fill="#3498db">
+                Export
+            </text>
+            ` : `
+            <text x="${radius}" y="${radius * 1.5}" text-anchor="middle" font-size="16" fill="#3eaf7c">
+                Verbrauch
+            </text>
+            `}
+
             ${maxPower ? `
-            <!-- Textanzeige des Maximalwerts unterhalb des aktuellen Werts mit Schatten -->
-            <text x="${radius}" y="${radius * 1.3}" text-anchor="middle" font-size="18" fill="#879194" filter="url(#shadow)">
+            <!-- Textanzeige des Maximalwerts -->
+            <text x="${radius}" y="${radius * 1.3}" text-anchor="middle" font-size="16" fill="#333">
                 Max: ${maxPower} W
             </text>
             ` : ""}
