@@ -125,7 +125,8 @@ Get it here:
 ## Tested with:
  - Shelly Plug / PlugS
  - Shelly Plus Plug S
- - Shelly Plus 1 PM 
+ - Shelly Plus 1 PM
+ - Shelly PM Mini Gen 3
 
 ## Credits
 - Open AI
