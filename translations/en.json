@@ -1,0 +1,9 @@
+{
+    "DEVICE": "Device",
+    "STATUS": "Status",
+    "POWER": "Power (W)",
+    "ON": "On",
+    "OFF": "Off",
+    "TOTAL": "Total",
+    "NA": "N/A"
+}
