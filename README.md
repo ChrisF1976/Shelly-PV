@@ -70,18 +70,28 @@ To use this module, add it to the modules array in the `config/config.js` file:
 		serverUri: "https://shelly-55-eu.shelly.cloud", // Shelly Cloud-API Server
 		authKey: "XXXXXXXXXXXXXXXXXXXXXXXXXXXX", // API-key: settings > user settings > auth. cloud Key > get key
 		shellys: [
-			{ name: "device-name", id: "1xxxxxxc89" },
-			{ name: "device-name", id: "2xxxxxxc89" },
-			{ name: "device-name", id: "3xxxxxxc89" },
-			{ name: "device-name", id: "4xxxxxxc89" },
-			{ name: "device-name", id: "5xxxxxxc89" },
-			{ name: "device-namee", id: "6xxxxxxc89" },
+			{ name: "device-nameA", id: "1xxxxxxc89" },
+			{ name: "device-nameB", id: "2xxxxxxc89" },
+			{ name: "device-nameC", id: "3xxxxxxc89" },
+			{ name: "device-nameD", id: "4xxxxxxc89" },
+			{ name: "PV xxxx", id: "5xxxxxxc89" },
+			{ name: "PV xxxx", id: "6xxxxxxc89" },
 			// device-name: device > settings > device info > device id
+			//add even more
 			],
-		updateInterval: 5*1000, // update every 5 seconds - 1s may be possible, but I did't try
-		MaxPower:"600",
-                Radius:"100",
-                ShowShellyList:true,
+		shellysSOURCE:  [
+			{ name: "PV xxxx" },
+			{ name: "PV xxxx" },
+			// add more devices. Name should match with name defined in "Shellys"
+			],
+		showPowerValue:true, //power value in device list true/false
+		updateInterval: 5*1000,
+		MaxPower:"100", // value for main gauge. Adjust as you like to the used power
+		MaxPowerSource:"1600", // value for second gauge. Adjust to your possible PV power.
+		Radius:"90", //circle radius
+		ShowShellyList:true, //device list true/false
+		SecondGauge: true, //if second gauge is not needed or you do not a power source set to false
+		Sum:true, //should the top value inside the gauge show a sum from shellys+ShellySource? 
 		}
 	},
 ```
@@ -94,9 +104,14 @@ Option|Possible values|Default|Description
 `authKey`|`string`|none|get your auth key in the app: "settings > user settings > auth. cloud Key > get key".
 `shellys`|`array[]`|none|see config example. "device-name" can be "Batman" or "whatever". To find the device-id go to: "device > settings > device info > device id".
 `updateInterval`|`integer`|5*1000|the api says that every second is possible. Find your best value.
-`MaxPower`|`integer`|0|Adjust this to your solar panel power to get the best view. If you put "//" in front or don't use this value is is not displayed. See pictures below. 
+`MaxPower`|`integer`|0|Adjust this to your shelly power in your home to get the best view. If you put "//" in front or don't use this value is is not displayed.
+`MaxPowerSource`|`integer`|0|Adjust this to your solar panel power to get the best view. If you put "//" in front or don't use this value is is not displayed.
 `Radius`|`integer`|100|defines more or less the size of the module. Down to 70 is possible. Use around 80-100 to get the best view.
 `ShowShellyList`|`true/false`|true|to show the devices in the list set as "true". With this setting you can also see if the device is switched on or off.
+`ShowPowerValue`|`true/false`|true|to show the devices power in the list set as "true".
+`SecondGauge`|`true/false`|true|builds up a seperate gauge for the shelly source elements. Looks much better than before ;-)
+`Sum`|`true/false`|true|relevant only if a source is defined. Sums up the power from all shellys in the top value of the main gauge.
+
 
 
 ### CSS
@@ -105,21 +120,20 @@ Included. Some descriptions are added. It took me a while to get a nice look. Ad
 
 ## More Examples:
 
-### With option "ShowShellyList:false,"
-![Only Gauge ("ShowShellyList:false,")](./only_gauge.png)
+### ShowPowerValue: false
+![ShowPowerValue_false](./ShowPowerValue_false.png)
 
-### "// maxPower:....,"
-![without_maxPower](./without_maxPower.png)
+## second gauge set to "false"
+![SecondGauge_false](./SecondGauge_false.png)
 
-### With MMM-ShellyStatusTable-module
-you can also show your normal shellys in this module. The main motivation for me was to display my Shelly devices in a visually appealing way—far beyond what a simple table could offer.
+### second gauge and Sum set to "false"
+![SecondGauge_and_Sum_false](./SecondGauge_and_Sum_false.png)
 
-![with ShellyStatusTable module](./with_Table.png)
+## ShowShellyList: false,
+![ShowShellyList_false](./ShowShellyList_false.png)
 
-Get it here:
-[https://github.com/ChrisF1976/ShellyStatusTable/](https://github.com/ChrisF1976/MMM-ShellyStatusTable)
-
-#### if the Module MMM-ShellyPV and MMM-ShellyStatusTable run parallel on your mirror you'll see some error messages. But anyway it works when the Mirror is fully running.
+### without source
+![Source_stashed](./Source_stashed.png)
 
 
 ## Tested with:
@@ -127,6 +141,8 @@ Get it here:
  - Shelly Plus Plug S
  - Shelly Plus 1 PM
  - Shelly PM Mini Gen 3
+
+Send a message if you discover a device that do not work!
 
 ## Credits
 - Open AI
