@@ -142,7 +142,7 @@ Included. Some descriptions are added. It took me a while to get a nice look. Ad
  - Shelly Plus 1 PM
  - Shelly PM Mini Gen 3
 
-####Send a message if you discover a device that do not work!
+#### Send a message if you discover a device that do not work!
 
 ## Credits
 - Open AI
