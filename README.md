@@ -123,16 +123,16 @@ Included. Some descriptions are added. It took me a while to get a nice look. Ad
 ### ShowPowerValue: false
 ![ShowPowerValue_false](./ShowPowerValue_false.png)
 
-## second gauge set to "false"
+### second gauge set to "false"
 ![SecondGauge_false](./SecondGauge_false.png)
 
-### second gauge and Sum set to "false"
+## second gauge and Sum set to "false"
 ![SecondGauge_and_Sum_false](./SecondGauge_and_Sum_false.png)
 
 ## ShowShellyList: false,
 ![ShowShellyList_false](./ShowShellyList_false.png)
 
-### without source
+## without source
 ![Source_stashed](./Source_stashed.png)
 
 
