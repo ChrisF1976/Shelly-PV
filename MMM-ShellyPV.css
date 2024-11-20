@@ -7,7 +7,7 @@
     margin: 0 auto;
     padding: 10px;
     color: #333;
-    width: 350px; /* Feste Gesamtbreite */
+    width: 400px; /* Feste Gesamtbreite */
     box-sizing: border-box;
 }
 
@@ -31,36 +31,51 @@
     transition: stroke-dasharray 0.3s ease;
 }
 
-/* Geräte-Liste im flexbox-Layout */
+/* Geraete-Liste im flexbox-Layout */
 .shellyPVGauge ul {
     display: flex;
-    flex-wrap: wrap; /* Bei zu vielen Geräten in die nächste Zeile umbrechen */
+    flex-wrap: wrap; /* Bei zu vielen Geraeten in die naechste Zeile umbrechen */
     padding: 0;
     margin: 0;
     list-style: none;
-    gap: 10px; /* Abstand zwischen den Geräten */
-    justify-content: center; /* Zentriert die Geräte in der Breite */
-    max-width: 100%; /* Passt die Geräte-Liste an die Breite an */
-    justify-content: center; /* Zentriert die Geräte nebeneinander */
+    gap: 10px; /* Abstand zwischen den Geraeten */
+    justify-content: center; /* Zentriert die Geraete in der Breite */
+    max-width: 100%; /* Passt die Geraete-Liste an die Breite an */
+    justify-content: center; /* Zentriert die Geraete nebeneinander */
  }
 
 .shellyPVGauge ul li {
-    padding: 5px 10px;
-    background-color: #f0f0f0; /* Hintergrundfarbe der Geräte */
+    padding: 2px 5px;
+    background-color: #f0f0f0; /* Hintergrundfarbe der Geraete */
     color: #333; /* Textfarbe */
+    font-weight:bold;
     border-radius: 8px;
-    font-size: 14px;
+    font-size: 17px;
     box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.6), 4px 3px 4px rgba(0, 0, 0, 0.4);
 }
 
-/* Für das grüne Hintergrund, wenn das Gerät eingeschaltet ist */
-.shellyPVGauge ul li.on {
-    background-color: #28a745; /* Grün, wenn eingeschaltet */
-    color: white; /* Weißer Text für besseren Kontrast */
+/* FÃ¼r das spezielle Geraet mit konstantem Namen */
+.shellyPVGauge ul li.specialDevice {
+    background-color: #3498db; /* Blau fuer export. Vergleiche gauge in MMM-ShellyPV.js */
+    color: white; /* Weisser Text fÃ¼r besseren Kontrast */
 }
 
-/* Standard Hintergrundfarbe, wenn das Gerät ausgeschaltet ist */
+/* FÃ¼r das grÃ¼ne Hintergrund, wenn das Geraet eingeschaltet ist */
+.shellyPVGauge ul li.on {
+    background-color: #3eaf7c; /* GrÃ¼n, wenn eingeschaltet */
+    color: white; /* Weisser Text fÃ¼r besseren Kontrast */
+}
+
+/* Standard Hintergrundfarbe, wenn das Geraet ausgeschaltet ist */
 .shellyPVGauge ul li.off {
     background-color: #f0f0f0; /* Standard Hintergrund, wenn ausgeschaltet */
     color: #333; /* Standard Textfarbe */
+}
+
+/* Power value style */
+.ShellyDevicePowerValue {
+    font-style: oblique;    /* Highlight the power value */
+    font-size: 17px;      /* Match the font size of the device name */
+    font-weight:bold;
+    color: #f0f0f0;         /* Subtle contrast color for power values */
 }
