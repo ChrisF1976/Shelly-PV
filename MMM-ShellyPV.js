@@ -2,8 +2,6 @@ Module.register("MMM-ShellyPV", {
     defaults: {
         showPowerValue: true,
         updateInterval: 30 * 1000, // Alle 30 Sekunden aktualisieren
-        MaxPower: "100",
-        MaxPowerSource: "600",
         Radius: "80",
         ShowShellyList: true,
         SecondGauge: true,
