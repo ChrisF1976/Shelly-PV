@@ -126,13 +126,13 @@ Included. Some descriptions are added. It took me a while to get a nice look. Ad
 ### second gauge set to "false"
 ![SecondGauge_false](./SecondGauge_false.png)
 
-## second gauge and Sum set to "false"
+### second gauge and Sum set to "false"
 ![SecondGauge_and_Sum_false](./SecondGauge_and_Sum_false.png)
 
-## ShowShellyList: false,
+### ShowShellyList: false,
 ![ShowShellyList_false](./ShowShellyList_false.png)
 
-## without source
+### without source
 ![Source_stashed](./Source_stashed.png)
 
 
@@ -142,7 +142,7 @@ Included. Some descriptions are added. It took me a while to get a nice look. Ad
  - Shelly Plus 1 PM
  - Shelly PM Mini Gen 3
 
-Send a message if you discover a device that do not work!
+####Send a message if you discover a device that do not work!
 
 ## Credits
 - Open AI
