@@ -141,6 +141,8 @@ Included. Some descriptions are added. It took me a while to get a nice look. Ad
  - Shelly Plus Plug S
  - Shelly Plus 1 PM
  - Shelly PM Mini Gen 3
+ - Shelly Plus 2 PM
+ - Shelly Plus RGBW PM
 
 #### Send a message if you discover a device that does not work!
 
