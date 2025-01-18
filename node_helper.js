@@ -67,6 +67,11 @@ module.exports = NodeHelper.create({
                         isOn = light?.ison || false;
                         power = data.meters ? data.meters[0].power : null;
                     }
+                    // Check for "em:0" structure EM3 Pro
+                    else if (data["em:0"]) {
+                        isOn = true; // Use just true for on/off status
+                        power = data["em:0"].total_act_power; // Use 'total_act_power' for power
+                    }
 
                     results.push({
                         name: shellyPV.name,
