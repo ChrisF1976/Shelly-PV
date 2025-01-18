@@ -69,7 +69,7 @@ To use this module, add it to the modules array in the `config/config.js` file:
 	config: {
 		serverUri: "https://shelly-55-eu.shelly.cloud", // Shelly Cloud-API Server
 		authKey: "XXXXXXXXXXXXXXXXXXXXXXXXXXXX", // API-key: settings > user settings > auth. cloud Key > get key
-		shellys: [
+		shellysPV: [
 			{ name: "device-nameA", id: "1xxxxxxc89" },
 			{ name: "device-nameB", id: "2xxxxxxc89" },
 			{ name: "device-nameC", id: "3xxxxxxc89" },
